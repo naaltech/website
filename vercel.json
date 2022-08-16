@@ -1,8 +1,9 @@
 {
 	"redirects": [
-		{ "source": "/apply", "destination": "https://airtable.com/shrmemSR13178BeFg" },
-		{ "source": "/discord", "destination": "https://discord.gg/6DWdVYpEzf" },
-		{ "source": "/matrix", "destination": "https://matrix.to/#/#hackropolis:livid.pw" },
-		{ "source": "/mixtape", "destination": "https://www.youtube.com/watch?v=DLzxrzFCyOs" }
+		{ "source": "/apply", "destination": "https://forms.office.com/r/Qya4Y80Q5e" },
+		{ "source": "/basvuru", "destination": "https://forms.office.com/r/Qya4Y80Q5e" },
+		{ "source": "/discord", "destination": "https://discord.gg/wT4PYqpXpN" },
+		{ "source": "/instagram", "destination": "https://instagram.com/naaltech/" },
+		{ "source": "/github", "destination": "https://github.com/naaltech/" }
 	]
 }
