@@ -30,7 +30,7 @@ function Home({ t }) {
 						<b>Biz kimiz?</b>
 					</p>
 					<p>
-						Naaltech, 2019 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen "The Hack Foundation"a üyedir.
+						Naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen "The Hack Foundation"a üyedir.
 					</p>
 					<p>
 						Temel olarak üyelerimize takım çalışmasını göstermek ve fikirlerinde yardımcı olmayı ve yıl içinde Türkiye içerisinde yapılan çeşitli yarışmalara katılıp okulumuzu temsil etmeyi amaçlıyoruz.
