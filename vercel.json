@@ -4,6 +4,7 @@
 		{ "source": "/basvuru", "destination": "https://forms.office.com/r/Qya4Y80Q5e" },
 		{ "source": "/discord", "destination": "https://discord.gg/wT4PYqpXpN" },
 		{ "source": "/instagram", "destination": "https://instagram.com/naaltech/" },
-		{ "source": "/github", "destination": "https://github.com/naaltech/" }
+		{ "source": "/github", "destination": "https://github.com/naaltech/" },
+		{ "source": "/soylesi", "destination": "https://forms.office.com/r/Dqm76jGELY" }
 	]
 }
