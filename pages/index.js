@@ -17,8 +17,8 @@ function Home({ t }) {
 				<meta property="og:url" content="https://naal.tech/" />
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
-				<meta property="og:image" content="https://naal.tech/logo.png" />
-				<link rel="canonical" href="https://naal.tech/" />
+				<meta property="og:image" content="https://naaltech.club/logo.png" />
+				<link rel="canonical" href="https://naaltech.club/" />
 			</Head>
 			<div className={styles.header}>
 				<h1 className={styles.title}>naaltech!</h1>
