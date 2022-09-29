@@ -61,6 +61,13 @@ function Home({ t }) {
 								</b>
 							</a>
 						</li>
+<li>
+							<a href="https://nevzatayazal.meb.k12.tr/" target="_blank" rel="noopener">
+								<b>
+									<u>Nevzat Ayaz Anadolu Lisesi</u>
+								</b>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div className={styles.links}>
@@ -81,9 +88,9 @@ function Home({ t }) {
 							</a>
 						</li>
 						<li>
-							<a href="https://nevzatayazal.meb.k12.tr/" target="_blank" rel="noopener">
+							<a href="https://wa.me/19093754470" target="_blank" rel="noopener">
 								<b>
-									<u>Nevzat Ayaz Anadolu Lisesi</u>
+									<u>Whatsapp</u>
 								</b>
 							</a>
 						</li>
