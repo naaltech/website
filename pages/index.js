@@ -14,7 +14,7 @@ function Home({ t }) {
 				<meta property="og:type" content="website" />
 				<meta name="og:title" property="og:title" content="naaltech" />
 				<meta name="og:description" property="og:description" content="Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
-				<meta property="og:url" content="https://naal.tech/" />
+				<meta property="og:url" content="https://naaltech.club/" />
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
 				<meta property="og:image" content="https://naaltech.club/logo.png" />
@@ -37,7 +37,7 @@ function Home({ t }) {
 					</p>
 					<p>
 						Eğer ilgini çektiysek... 
-						<a href="https://forms.office.com/r/Qya4Y80Q5e" target="_blank" rel="noopener">
+						<a href="https://forms.gle/JDP6BHjTtyQGHvPc8" target="_blank" rel="noopener">
 							<b> bize katıl!</b>
 						</a>
 					</p>
@@ -74,7 +74,7 @@ function Home({ t }) {
 					<h3>İletişim</h3>
 					<ul className={styles.list}>
 						<li>
-							<a href="https://forms.office.com/r/Qya4Y80Q5e" target="_blank" rel="noopener">
+							<a href="https://forms.gle/JDP6BHjTtyQGHvPc8" target="_blank" rel="noopener">
 								<b>
 									<u>Başvuru formu</u>
 								</b>
