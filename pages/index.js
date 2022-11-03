@@ -50,29 +50,44 @@ function Home({ t }) {
 						<li>
 							<a href="https://www.instagram.com/naaltech/" target="_blank" rel="noopener">
 								<b>
-									<u>Instagram sayfamız</u>
+									<u>Instagram</u>
+								</b>
+							</a>
+						</li>
+                                                <li>
+							<a href="https://twitter.com/naalteknoloji" target="_blank" rel="noopener">
+								<b>
+									<u>Twitter</u>
 								</b>
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/naaltech" target="_blank" rel="noopener">
 								<b>
-									<u>Github adresimiz</u>
+									<u>Github</u>
 								</b>
 							</a>
 						</li>
-<li>
+                                                <li>
+							<a href="https://www.linkedin.com/company/naaltech/" target="_blank" rel="noopener">
+								<b>
+									<u>LinkedIn</u>
+								</b>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div className={styles.links}>
+					<h3>İletişim</h3>
+					<ul className={styles.list}>
+						<li>
 							<a href="https://nevzatayazal.meb.k12.tr/" target="_blank" rel="noopener">
 								<b>
 									<u>Nevzat Ayaz Anadolu Lisesi</u>
 								</b>
 							</a>
 						</li>
-					</ul>
-				</div>
-				<div className={styles.links}>
-					<h3>İletişim</h3>
-					<ul className={styles.list}>
 						<li>
 							<a href="https://forms.gle/JDP6BHjTtyQGHvPc8" target="_blank" rel="noopener">
 								<b>
@@ -83,7 +98,7 @@ function Home({ t }) {
 						<li>
 							<a href="https://discord.gg/wT4PYqpXpN" target="_blank" rel="noopener">
 								<b>
-									<u>Discord sunucumuz</u>
+									<u>Discord</u>
 								</b>
 							</a>
 						</li>
