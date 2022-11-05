@@ -23,7 +23,7 @@ function Home({ t }) {
 					function gtag(){dataLayer.push(arguments)}
 					gtag('js', new Date());
 					gtag('config', 'G-0SWZVHH3H7');
-</script>
+				</script>
 				<meta property="og:image" content="https://naaltech.club/logo.png" />
 				<link rel="canonical" href="https://naaltech.club/" />
 			</Head>
