@@ -6,6 +6,15 @@ function Home({ t }) {
 	return (
 		<div className={styles.container}>
 			<Head>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SWZVHH3H7"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){
+				dataLayer.push(arguments)
+				}
+				gtag('js', new Date());
+				gtag('config', 'G-0SWZVHH3H7');
+</script>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<title>naaltech</title>
 				<meta name="description" content="Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
@@ -18,12 +27,6 @@ function Home({ t }) {
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
 				<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SWZVHH3H7"></script>
-                                <script>
-					window.dataLayer = window.dataLayer || [];
-                                        function gtag(){dataLayer.push(arguments);}
-                                        gtag('js', new Date());
-                                        gtag('config', 'G-0SWZVHH3H7');
-                                </script>
 				<meta property="og:image" content="https://naaltech.club/logo.png" />
 				<link rel="canonical" href="https://naaltech.club/" />
 			</Head>
