@@ -17,13 +17,6 @@ function Home({ t }) {
 				<meta property="og:url" content="https://naaltech.club/" />
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SWZVHH3H7"></script>
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments)}
-					gtag('js', new Date());
-					gtag('config', 'G-0SWZVHH3H7');
-				</script>
 				<meta property="og:image" content="https://naaltech.club/logo.png" />
 				<link rel="canonical" href="https://naaltech.club/" />
 			</Head>
