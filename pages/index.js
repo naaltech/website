@@ -7,18 +7,18 @@ function Home({ t }) {
 		<div className={styles.container}>
 			<Head>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<title>naaltech</title>
-				<meta name="description" content="Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
+				<title>naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi</title>
+				<meta name="description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
 				<link rel="icon" href="/favicon.ico" />
 				<meta name="theme-color" content="#ffffff" />
 				<meta property="og:type" content="website" />
-				<meta name="og:title" property="og:title" content="naaltech" />
-				<meta name="og:description" property="og:description" content="Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
-				<meta property="og:url" content="https://naaltech.club/" />
+				<meta name="og:title" property="og:title" content="naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
+				<meta name="og:description" property="og:description" content="naaltechh, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
+				<meta property="og:url" content="https://naaltech.com.tr/" />
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
-				<meta property="og:image" content="https://naaltech.club/logo.png" />
-				<link rel="canonical" href="https://naaltech.club/" />
+				<meta property="og:image" content="https://naaltech.com.tr/logo.png" />
+				<link rel="canonical" href="https://naaltech.com.tr/" />
 			</Head>
 			<div className={styles.header}>
 				<h1 className={styles.title}>naaltech!</h1>
