@@ -1,15 +1,10 @@
 import Head from 'next/head';
-import Script from 'next/script'
 import { withTranslation, i18n } from '../i18n'
 import styles from '../styles/Home.module.css';
 
 function Home({ t }) {
 	return (
 		<div className={styles.container}>
-			<Script src="https://www.googletagmanager.com/gtag/js?id=G-9ZVEYFNGEJ" strategy="afterInteractive" />
-			<Script id="google-analytics" strategy="afterInteractive">
-				{`window.dataLayer = window.dataLayer || [];function gtag(){window.dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-9ZVEYFNGEJ');`}
-			</Script>
 			<Head>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<title>naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi</title>
