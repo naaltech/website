@@ -6,10 +6,11 @@ import styles from '../styles/Home.module.css';
 function Home({ t }) {
 	return (
 		<div className={styles.container}>
-			<Head>
 			<Script src="https://www.googletagmanager.com/gtag/js?id=G-9ZVEYFNGEJ" strategy="afterInteractive" />
 			<Script id="google-analytics" strategy="afterInteractive">
-				{`window.dataLayer = window.dataLayer || [];function gtag(){window.dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-9ZVEYFNGEJ');`}</Script>
+				{`window.dataLayer = window.dataLayer || [];function gtag(){window.dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-9ZVEYFNGEJ');`}
+			</Script>
+			<Head>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<title>naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi</title>
 				<meta name="description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
