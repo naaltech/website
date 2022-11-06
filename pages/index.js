@@ -6,6 +6,15 @@ function Home({ t }) {
 	return (
 		<div className={styles.container}>
 			<Head>
+			<Script id="google-tag-manager" strategy="afterInteractive">
+      {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${GTM_ID}');
+      `}
+    </Script>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<title>naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi</title>
 				<meta name="description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
@@ -15,15 +24,6 @@ function Home({ t }) {
 				<meta property="og:type" content="website" />
 				<meta name="og:title" property="og:title" content="naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
 				<meta name="og:description" property="og:description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZVEYFNGEJ"></script>
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){
-					dataLayer.push(arguments)
-					}
-					gtag('js', new Date());
-					gtag('config', 'G-9ZVEYFNGEJ');
-					</script>
 				<meta property="og:url" content="https://naaltech.com.tr/" />
 				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
