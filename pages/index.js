@@ -11,7 +11,7 @@ function Home({ t }) {
 				<meta name="description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
 				<link rel="icon" href="/favicon.ico" />
 				<meta name="theme-color" content="#ffffff" />
-				<meta name="keywords" content="naaltech, naal, teknoloji, nevzatayazal, atölye, kulüp, nevzat ayaz anadolu lisesi" />
+				<meta name="keywords" content="naaltech, naal, teknoloji, nevzatayazal, atölye, kulüp, nevzat ayaz anadolu lisesi, nevzatayaz, nevzat ayaz" />
 				<meta property="og:type" content="website" />
 				<meta name="og:title" property="og:title" content="naaltech - Nevzat Ayaz Anadolu Lisesi Teknoloji Atölyesi" />
 				<meta name="og:description" property="og:description" content="naaltech, 2022 yılında Nevzat Ayaz Anadolu Lisesi'nde öğrenciler tarafından okul içerisinde yazılım, robotik ve siber güvenlik alanlarında faaliyetler düzenlemek için kurulmuş bir kulüptür. Kulüp resmi olarak Nevzat Ayaz Anadolu Lisesi altında çalışmaktadır, ayrıca dünya üzerindeki teknoloji kulüplerini destekleyen 'The Hack Foundation'a üyedir." />
