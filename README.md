@@ -1,6 +1,6 @@
-# hackropolis.club - the club website
+# naaltech.club - the club website
 
-This is our clubs website, built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com?utm_source=hackropolis&utm_campaign=oss&utm_medium=link)
+This is our clubs website, built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com?utm_source=naaltech&utm_campaign=oss&utm_medium=link)
 
 ## Getting Started with development
 
@@ -29,4 +29,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 This project is powered by
 
-[![Vercel](https://raw.githubusercontent.com/hackropolis/website/main/public/sponsors/vercel-dark.svg)](https://vercel.com?utm_source=hackropolis&utm_campaign=oss&utm_medium=link)
+[![Vercel](https://raw.githubusercontent.com/hackropolis/website/main/public/sponsors/vercel-dark.svg)](https://vercel.com?utm_source=naaltech&utm_campaign=oss&utm_medium=link)
