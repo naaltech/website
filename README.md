@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa1ee7f1-a652-46a9-8f09-bd3e5b2b9eaf/deploy-status)](https://app.netlify.com/projects/naaltech/deploys)
 # Nevzat Ayaz Anatolian High School Tech Club Website
 
 Official website for Nevzat Ayaz Anatolian High School Technology Club. Built with Next.js 13+ App Router, TypeScript, and Tailwind CSS.

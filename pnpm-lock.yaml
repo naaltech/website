@@ -149,6 +149,9 @@ importers:
       recharts:
         specifier: 2.15.4
         version: 2.15.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      simple-icons:
+        specifier: ^15.10.0
+        version: 15.10.0
       sonner:
         specifier: ^1.7.4
         version: 1.7.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -1637,6 +1640,10 @@ packages:
   sharp@0.33.5:
     resolution: {integrity: sha512-haPVm1EkS9pgvHrQ/F3Xy+hgcuMV0Wm9vfIBSiwZ05k+xgb0PkBQpGsAA/oWdDobNaZTH5ppvHtzCFbnSEwHVw==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+
+  simple-icons@15.10.0:
+    resolution: {integrity: sha512-KqbtVCi+8Ru/UZjt/a/pIBESMhNqDqsV9SP1p1n3+pg9YzNQNDSJhlisPP3aneoBgNFCdcwiT+cc8C19VFRzSA==}
+    engines: {node: '>=0.12.18'}
 
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
@@ -3142,6 +3149,8 @@ snapshots:
       '@img/sharp-win32-ia32': 0.33.5
       '@img/sharp-win32-x64': 0.33.5
     optional: true
+
+  simple-icons@15.10.0: {}
 
   simple-swizzle@0.2.2:
     dependencies:
