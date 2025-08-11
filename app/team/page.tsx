@@ -29,6 +29,13 @@ const formerVicePresidents = [
     period: "2022-2023", 
     graduation: "Mezuniyet 2024",
     image: "/photos/onur.png"
+  },
+  {
+    id: 4,
+    name: "Mustafa Yiğit Gökgöz",
+    period: "2021-2022", 
+    graduation: "Mezuniyet 2023",
+    image: "/photos/yigit.png"
   }
 ]
 
@@ -256,7 +263,7 @@ export default function TeamPage() {
             <p className="text-gray-600">Kulübümüzün temellerini atan ve yönetmiş olan eski başkanlarımız</p>
           </div>
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-4xl">
               {formerPresidents.map((person) => (
                 <Card key={person.id} className="border-gray-200">
                   <CardContent className="p-6">
@@ -291,7 +298,7 @@ export default function TeamPage() {
             <p className="text-gray-600">Kulübümüzün gelişiminde önemli rol oynayan eski başkan yardımcılarımız</p>
           </div>
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-4xl">
               {formerVicePresidents.map((person) => (
                 <Card key={person.id} className="border-gray-200">
                   <CardContent className="p-6">
