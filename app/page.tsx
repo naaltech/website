@@ -158,17 +158,17 @@ export default function HomePage() {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Geleceğin teknolojilerini bugünden keşfeden, üreten ve paylaşan bir topluluk.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/join-us">
-              <Button size="lg" className="bg-gray-900 hover:bg-gray-800">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
+            <Link href="/join-us" className="w-full sm:w-auto">
+              <Button size="lg" className="bg-gray-900 hover:bg-gray-800 w-full sm:w-auto px-8">
                 Başvuru Yap
               </Button>
             </Link>
-            <Link href="mailto:tech@naal.org.tr">
+            <Link href="mailto:tech@naal.org.tr" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
+                className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent w-full sm:w-auto px-8"
               >
                 İletişim
               </Button>
@@ -234,10 +234,6 @@ export default function HomePage() {
                   <p className="text-sm text-gray-600">
                     Toplam <span className="font-semibold text-blue-600">{clubs.length}</span> aktif kulüp
                   </p>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                    <span>Aktif Kulüp</span>
-                  </div>
                 </div>
                 <div 
                   ref={mapContainerRef}
