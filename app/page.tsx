@@ -184,7 +184,7 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Kulübümüz Hakkında</h2>
               <p className="text-gray-600 mb-4">
-                Kulübümüz, Nevzat Ayaz Robotik Kulübü olarak 2019 yılında kurulmuştur. 2020 yılında okulumuzun Bilim Kulübü ile birleşerek çalışmalarına "Bilim Kulübü Teknoloji Ekibi" adıyla devam etmiştir. 2022 yılında ise Bilim Kulübü’nden ayrılarak, "Teknoloji Kulübü" adıyla yeniden bağımsız bir yapı kazanmıştır.
+                Kulübümüz, Nevzat Ayaz Robotik Kulübü olarak 2019 yılında kurulmuştur.2020 yılında okulumuzun Bilim Kulübü ile birleşerek çalışmalarına "Bilim Kulübü Teknoloji Ekibi" adıyla devam etmiştir. 2022 yılında ise Bilim Kulübü’nden ayrılarak, "Teknoloji Kulübü" adıyla yeniden bağımsız bir yapı kazanmıştır.
               </p>
               <p className="text-gray-600 mb-6">
                 Kulübümüzün amacı; okul içinde ve dışında yazılım, robotik ve siber güvenlik alanlarında çeşitli faaliyetler düzenlemek, bu alanlara ilgi duyan öğrencileri bir araya getirerek üretken bir topluluk oluşturmaktır.
@@ -252,7 +252,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
             <p className="text-gray-600">
-              Everything you need to know about joining and participating in our tech club.
+              Sıkça sorulan sorulara ve kulübümüzle ilgili merak edilen konulara buradan ulaşabilirsiniz.
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full">

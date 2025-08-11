@@ -114,7 +114,7 @@ export default function LegalPage() {
                   Kulüp tüzüğünün tam metnini incelemek ve detaylı bilgi almak için:
                 </p>
                 <a 
-                  href="https://docs.google.com/document/d/1LO9WMtdpjHFZHtV6iqzC1HlmWd2Z78zFA3Qm8K2pcyg/edit?usp=sharing"
+                  href="https://drive.google.com/file/d/13CRHrLPIWo8jSA_qAyJHc7Vv244oNwzy/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
@@ -262,7 +262,7 @@ export default function LegalPage() {
                   Kulübümüzün tam davranış kuralları dokümanını incelemek için:
                 </p>
                 <a 
-                  href="https://docs.google.com/document/d/14tJKhtNtL-3uzk-IcK3isa9HU6YoFrYvVYfDNHLbDHE/edit?usp=sharing"
+                  href="https://drive.google.com/file/d/1ycNpqLvlb4mPEAnLnmDZrSjIIBFGBd6y/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
@@ -414,7 +414,7 @@ export default function LegalPage() {
                   </Button>
                 </Link>
                 <Link 
-                  href="https://docs.google.com/document/d/1qjzvHPcms9PNcYCH5eTPYJj8x2co5tt3/edit?usp=sharing&ouid=110137684885854368143&rtpof=true&sd=true" 
+                  href="https://drive.google.com/file/d/1ktWXiVtVRq4WHPkZ_1KU02EGvY2ITrzO/view" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
