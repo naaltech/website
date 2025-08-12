@@ -27,7 +27,7 @@ export default function LegalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Yasal Belgeler</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Teknoloji kulübü üyelerimiz ve faaliyetlerimiz için önemli yasal bilgiler, politikalar ve yönergeler.
+            Teknoloji Kulübü üyelerimiz ve faaliyetlerimiz için önemli yasal bilgiler, politikalar ve yönergeler.
           </p>
         </div>
       </section>

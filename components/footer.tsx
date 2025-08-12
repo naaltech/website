@@ -47,9 +47,14 @@ export function Footer() {
         </div>
         <div className="border-t border-gray-200 mt-6 pt-6 text-center text-sm text-gray-500">
           <p className="mb-2">&copy; {new Date().getFullYear()} Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü. Tüm hakları saklıdır.</p>
-          <p className="text-xs text-gray-400">
-            Fiscally sponsored by <a href="https://hackclub.com/bank" className="hover:text-gray-600 underline">Hack Club Bank</a>
-          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-xs text-gray-400">
+            <p>
+              Fiscally sponsored by <a href="https://the.hackfoundation.org/" className="hover:text-gray-600 underline">The Hack Foundation</a>, a 501(c)(3) nonprofit (EIN: 81-2908499)</p>
+            <span className="hidden sm:inline">•</span>
+            <p>
+              Açık Kaynak: <a href="https://github.com/naaltech/website" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 underline">GitHub</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

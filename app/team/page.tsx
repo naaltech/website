@@ -83,7 +83,7 @@ export default function TeamPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ekibimiz</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Teknoloji kulübümüzü yöneten özverili bireylerle ve başarımızın yolunu açan mezunlarımızla tanışın.
+            Teknoloji Kulübümüzü yöneten özverili bireylerle ve başarımızın yolunu açan mezunlarımızla tanışın.
           </p>
         </div>
       </section>
