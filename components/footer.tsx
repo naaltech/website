@@ -42,6 +42,11 @@ export function Footer() {
               <p>Nevzat Ayaz Anadolu Lisesi</p>
               <p>İnkılap Mah. Yelkenciler Sok. No: 1</p>
               <p>Ümraniye, İstanbul, Türkiye</p>
+              <p>
+                <a href="mailto:tech@naal.org.tr" className="hover:text-gray-900 underline">
+                  tech@naal.org.tr
+                </a>
+              </p>
             </div>
           </div>
         </div>
