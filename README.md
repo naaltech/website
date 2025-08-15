@@ -3,6 +3,8 @@
 
 Official website for Nevzat Ayaz Anatolian High School Technology Club. Built with Next.js 13+ App Router, TypeScript, and Tailwind CSS.
 
+<img width="1280" height="640" alt="Untitled design(2)" src="https://github.com/user-attachments/assets/6cac5b8c-a7c6-4bfb-9377-7a681ea6bf68" />
+
 ## 🚀 Features
 
 - **Modern Design**: Responsive design with Tailwind CSS and shadcn/ui components
@@ -66,4 +68,5 @@ pnpm dev
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
 
