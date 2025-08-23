@@ -391,7 +391,7 @@ export default function HomePage() {
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="https://discord.gg/naaltech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-500 transition-colors">
+            <a href="https://discord.gg/vXp2EdEMvr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-500 transition-colors">
               <span className="sr-only">Discord</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d={siDiscord.path} />
