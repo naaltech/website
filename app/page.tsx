@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
 import { MapPin, Users, Code, Cpu, Globe, Heart, Mail, Phone, MapIcon, Instagram, Linkedin, Github } from "lucide-react"
 import { siDiscord } from "simple-icons"
 import Link from "next/link"
@@ -52,8 +53,14 @@ interface Club {
 export default function HomePage() {
   const [clubs, setClubs] = useState<Club[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const mapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  // Popup'ı sayfa yüklendiğinde göster
+  useEffect(() => {
+    setShowPopup(true);
+  }, []);
 
   // Ana sayfa için metadata'yı dinamik olarak ekle
   useEffect(() => {
@@ -147,6 +154,33 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+
+      {/* Tasfiye Duyuru Popup'ı */}
+      <AlertDialog open={showPopup} onOpenChange={setShowPopup}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-2xl font-bold text-center">
+              Önemli Duyuru
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-center space-y-4 pt-4">
+              <p className="text-lg font-semibold text-gray-900">
+                Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü tasfiye edilmiştir.
+              </p>
+              <p className="text-sm text-gray-600">
+                Kulübümüz, kuruluşundan bu yana teknoloji tutkunu öğrencilere ev sahipliği yapmış ve birçok başarıya imza atmıştır.
+              </p>
+              <p className="text-sm text-gray-600">
+                Tüm üyelerimize, danışman öğretmenlerimize ve destekçilerimize sonsuz teşekkürler.
+              </p>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction className="w-full bg-gray-900 hover:bg-gray-800">
+              Anladım
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
