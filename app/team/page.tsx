@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Award, Calendar, Mail } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import Head from 'next/head';
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
 import type { Metadata } from 'next'
@@ -75,6 +76,10 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
+    <>
+    <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
     <div className="min-h-screen bg-white">
       <Header />
 
@@ -392,5 +397,6 @@ export default function TeamPage() {
 
       <Footer />
     </div>
+      </>
   )
 }
