@@ -7,8 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
-import { MapPin, Users, Code, Cpu, Globe, Heart, Mail, Phone, MapIcon, Instagram, Linkedin, Github } from "lucide-react"
-import { siDiscord } from "simple-icons"
+import { MapPin, Users, Code, Cpu, Globe, Heart, Mail, Phone, MapIcon } from "lucide-react"
+import type { Map as LeafletMap } from "leaflet"
+import { siDiscord, siGithub, siInstagram } from "simple-icons"
 import Link from "next/link"
 import Image from "next/image"
 import Header from "@/components/header"
@@ -54,7 +55,7 @@ export default function HomePage() {
   const [clubs, setClubs] = useState<Club[]>([]);
   const [loading, setLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-  const mapRef = useRef<L.Map | null>(null);
+  const mapRef = useRef<LeafletMap | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
   // Popup'ı sayfa yüklendiğinde göster
@@ -419,11 +420,15 @@ export default function HomePage() {
           <div className="flex justify-center space-x-6">
             <a href="https://instagram.com/naaltech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
               <span className="sr-only">Instagram</span>
-              <Instagram className="h-6 w-6" />
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d={siInstagram.path} />
+              </svg>
             </a>
             <a href="https://linkedin.com/company/naaltech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
               <span className="sr-only">LinkedIn</span>
-              <Linkedin className="h-6 w-6" />
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </a>
             <a href="https://discord.gg/vXp2EdEMvr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-500 transition-colors">
               <span className="sr-only">Discord</span>
@@ -433,7 +438,9 @@ export default function HomePage() {
             </a>
             <a href="https://github.com/naaltech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
               <span className="sr-only">GitHub</span>
-              <Github className="h-6 w-6" />
+              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d={siGithub.path} />
+              </svg>
             </a>
           </div>
         </div>
