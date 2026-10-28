@@ -13,6 +13,11 @@ const navigation = [
   { name: "Başvuru", href: "/join-us" },
 ]
 
+function isCurrent(pathname: string, href: string) {
+  if (href === "/") return pathname === "/"
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -38,7 +43,7 @@ export default function Header() {
                 href={item.href}
                 className={cn(
                   "px-3 py-2 text-sm font-medium transition-colors",
-                  pathname === item.href
+                  isCurrent(pathname, item.href)
                     ? "text-gray-900 hover:text-gray-600"
                     : "text-gray-600 hover:text-gray-900"
                 )}
@@ -78,7 +83,7 @@ export default function Header() {
                 href={item.href}
                 className={cn(
                   "block px-3 py-2 text-base font-medium rounded-md transition-colors",
-                  pathname === item.href
+                  isCurrent(pathname, item.href)
                     ? "text-gray-900 bg-gray-50"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                 )}

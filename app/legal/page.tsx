@@ -5,6 +5,7 @@ import { FileText, Shield, Users, AlertCircle, Mail, ExternalLink, Building } fr
 import Link from "next/link"
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
+import { documentHref } from "@/lib/legal-documents"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -113,16 +114,13 @@ export default function LegalPage() {
                 <p className="text-sm text-gray-600 mb-2">
                   Kulüp tüzüğünün tam metnini incelemek ve detaylı bilgi almak için:
                 </p>
-                <a 
-                  href="https://drive.google.com/file/d/13CRHrLPIWo8jSA_qAyJHc7Vv244oNwzy/view"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={documentHref("kulup-tuzugu")}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
                   <FileText className="h-4 w-4" />
                   Kulüp Tüzüğünü İncele
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
 
               <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
@@ -168,48 +166,48 @@ export default function LegalPage() {
                   Hack Club fiscal sponsorship kapsamındaki resmi belgeler:
                 </p>
                 <div className="grid md:grid-cols-2 gap-3">
-                  <a 
-                    href="https://drive.google.com/file/d/1Jzs34mLhugLQko0gXMV54HCEcg1_zWZb/view?usp=sharing"
+                  <Link
+                    href={documentHref("verification-letter")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     Verification Letter
-                  </a>
-                  <a 
-                    href="https://drive.google.com/file/d/1cmiBF5sfKpVJaQ7DghWnjVHh3vo09e-i/view?usp=sharing"
+                  </Link>
+                  <Link
+                    href={documentHref("fiscal-sponsorship")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     Fiscal Sponsorship Confirmation
-                  </a>
-                  <a 
-                    href="https://drive.google.com/file/d/1VF-E4u8Vt9suZxg0VdwVUzs4e6FlA5tw/view?usp=sharing"
+                  </Link>
+                  <Link
+                    href={documentHref("certificate-of-status")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     Certificate of Status
-                  </a>
-                  <a 
-                    href="https://drive.google.com/file/d/1OPCDRGJQMfN0ymmmyv0RKEvOlYP0MO_u/view?usp=sharing"
+                  </Link>
+                  <Link
+                    href={documentHref("irs-501c3")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     IRS 501(c)(3) Certificate
-                  </a>
-                  <a 
-                    href="https://drive.google.com/file/d/1yhqNWn9uo14H6roIU6eDL4p-k_5PqMa-/view?usp=sharing"
+                  </Link>
+                  <Link
+                    href={documentHref("hack-club-w9")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     Hack Club W-9 Form
-                  </a>
-                  <a 
-                    href="https://drive.google.com/file/d/1JOTGcIMSLCN8DkvHZoXfJjHnwjtRFWFf/view?usp=sharing"
+                  </Link>
+                  <Link
+                    href={documentHref("hack-foundation-990")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     <FileText className="h-4 w-4" />
                     Hack Foundation 990
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -261,15 +259,13 @@ export default function LegalPage() {
                 <p className="text-sm text-gray-600 mb-2">
                   Kulübümüzün tam davranış kuralları dokümanını incelemek için:
                 </p>
-                <a 
-                  href="https://drive.google.com/file/d/1ycNpqLvlb4mPEAnLnmDZrSjIIBFGBd6y/view"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={documentHref("davranis-kurallari")}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
                   <FileText className="h-4 w-4" />
                   Tam Davranış Kuralları Dokümanı
-                </a>
+                </Link>
               </div>
 
               <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
@@ -370,7 +366,7 @@ export default function LegalPage() {
                     <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</div>
                     <div>
                       <h4 className="font-semibold text-blue-800">Form Seçin</h4>
-                      <p className="text-blue-700 text-sm">Dijital form (online başvuru) veya fiziksel form (indirip yazdırarak) seçeneklerinden birini tercih edin.</p>
+                      <p className="text-blue-700 text-sm">Dijital form (online başvuru) veya fiziksel formu okuyucuda açıp yazdırma seçeneklerinden birini tercih edin.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -413,14 +409,10 @@ export default function LegalPage() {
                     Dijital Form (Online Başvuru)
                   </Button>
                 </Link>
-                <Link 
-                  href="https://drive.google.com/file/d/1ktWXiVtVRq4WHPkZ_1KU02EGvY2ITrzO/view" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+                <Link href={documentHref("uyelik-basvuru-formu")}>
                   <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Fiziksel Form (İndir/Yazdır)
+                    <FileText className="h-4 w-4 mr-2" />
+                    Fiziksel Formu Görüntüle
                   </Button>
                 </Link>
               </div>

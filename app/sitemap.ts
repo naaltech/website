@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { legalDocuments } from '@/lib/legal-documents'
 
 export const dynamic = 'force-static'
 
@@ -30,5 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    ...legalDocuments.map((document) => ({
+      url: `${baseUrl}/legal/oku/${document.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    })),
   ]
 }
