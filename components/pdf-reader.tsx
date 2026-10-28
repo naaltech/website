@@ -82,8 +82,12 @@ export function PdfReader({
       cancelled = true
       const pdf = pdfRef.current
       pdfRef.current = null
-      if (pdf) void pdf.destroy().catch(() => undefined)
-      else void loadingTask?.destroy().catch(() => undefined)
+      try {
+        if (pdf) void pdf.destroy().catch(() => undefined)
+        else void loadingTask?.destroy().catch(() => undefined)
+      } catch {
+        // Navigating away can destroy the worker while a page is still drawing.
+      }
     }
   }, [fileUrl])
 
@@ -130,6 +134,8 @@ export function PdfReader({
           canvas.style.height = `${Math.floor(viewport.height)}px`
           canvas.className = "pdf-page bg-white shadow-md"
 
+          if (cancelled || run !== generation || !host.isConnected) return
+
           const wrap = document.createElement("div")
           wrap.className = "flex justify-center"
           wrap.appendChild(canvas)
@@ -140,6 +146,7 @@ export function PdfReader({
             viewport,
             transform: ratio === 1 ? undefined : [ratio, 0, 0, ratio, 0, 0],
           })
+          task.promise.catch(() => undefined)
           tasks.push(task)
           await task.promise
         }
@@ -165,10 +172,57 @@ export function PdfReader({
       generation += 1
       cancelAnimationFrame(frame)
       window.removeEventListener("resize", onResize)
-      tasks.forEach((task) => task.cancel())
-      host.replaceChildren()
+      for (const task of tasks) {
+        try {
+          task.cancel()
+        } catch {
+          // The render may already have finished.
+        }
+      }
+      try {
+        host.replaceChildren()
+      } catch {
+        // The page is already gone.
+      }
     }
   }, [status, zoom])
+
+  useEffect(() => {
+    if (status !== "ready") return
+
+    const onBeforePrint = () => {
+      if (document.getElementById("pdf-print-root")) return
+      const canvases = hostRef.current?.querySelectorAll("canvas")
+      if (!canvases?.length) return
+
+      const root = document.createElement("div")
+      root.id = "pdf-print-root"
+      try {
+        for (const canvas of canvases) {
+          const image = document.createElement("img")
+          image.alt = ""
+          image.src = canvas.toDataURL("image/png")
+          root.appendChild(image)
+        }
+      } catch {
+        root.remove()
+        return
+      }
+      document.body.appendChild(root)
+    }
+
+    const onAfterPrint = () => {
+      document.getElementById("pdf-print-root")?.remove()
+    }
+
+    window.addEventListener("beforeprint", onBeforePrint)
+    window.addEventListener("afterprint", onAfterPrint)
+    return () => {
+      window.removeEventListener("beforeprint", onBeforePrint)
+      window.removeEventListener("afterprint", onAfterPrint)
+      document.getElementById("pdf-print-root")?.remove()
+    }
+  }, [status])
 
   return (
     <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
@@ -238,10 +292,21 @@ export function PdfReader({
 
       <style>{`
         @media print {
-          nav, footer, .no-print { display: none !important; }
-          .pdf-scroll { max-height: none !important; overflow: visible !important; background: white !important; }
-          .pdf-page { box-shadow: none !important; break-after: page; }
+          body:has(#pdf-print-root) > *:not(#pdf-print-root) { display: none !important; }
+          #pdf-print-root { display: block !important; margin: 0; padding: 0; }
+          #pdf-print-root img {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            break-after: page;
+            page-break-after: always;
+          }
+          #pdf-print-root img:last-child {
+            break-after: auto;
+            page-break-after: auto;
+          }
         }
+        @page { margin: 0; }
       `}</style>
     </div>
   )
