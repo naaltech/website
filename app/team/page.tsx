@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, Calendar, Mail } from "lucide-react"
+import { CalendarIcon, EnvelopeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import Image from "next/image"
 import Head from 'next/head';
@@ -121,7 +121,7 @@ export default function TeamPage() {
                   Leading the club with passion for AI and machine learning. Organized 15+ workshops this year.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>elif.yilmaz@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -147,7 +147,7 @@ export default function TeamPage() {
                   Specializes in web development and cybersecurity. Manages our partnership programs.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>mehmet.kaya@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -173,7 +173,7 @@ export default function TeamPage() {
                   Keeps us organized and manages communications. Expert in mobile app development.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>zeynep.demir@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -199,7 +199,7 @@ export default function TeamPage() {
                   Manages club finances and sponsorships. Passionate about fintech and blockchain.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>can.ozkan@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -225,7 +225,7 @@ export default function TeamPage() {
                   Organizes hackathons and competitions. Specializes in game development and UX design.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>ayse.sahin@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -251,7 +251,7 @@ export default function TeamPage() {
                   Leads technical workshops and mentors junior members. Expert in robotics and IoT.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>burak.yildiz@student.nahs.edu.tr</span>
                 </div>
               </CardContent>
@@ -283,7 +283,7 @@ export default function TeamPage() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">{person.name}</h3>
                       <p className="text-gray-600 text-sm mb-2">{person.period}</p>
                       <div className="flex items-center justify-center gap-1 text-xs text-gray-500 mb-3">
-                        <Calendar className="h-3 w-3" />
+                        <CalendarIcon className="h-3 w-3" />
                         <span>{person.graduation}</span>
                       </div>
                     </div>
@@ -318,7 +318,7 @@ export default function TeamPage() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">{person.name}</h3>
                       <p className="text-gray-600 text-sm mb-2">{person.period}</p>
                       <div className="flex items-center justify-center gap-1 text-xs text-gray-500 mb-3">
-                        <Calendar className="h-3 w-3" />
+                        <CalendarIcon className="h-3 w-3" />
                         <span>{person.graduation}</span>
                       </div>
                     </div>
@@ -359,7 +359,7 @@ export default function TeamPage() {
                   guiding our club for 5 years.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>f.ozdemir@nahsschool.edu.tr</span>
                 </div>
               </CardContent>
@@ -386,7 +386,7 @@ export default function TeamPage() {
                   competition teams.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Mail className="h-4 w-4" />
+                  <EnvelopeIcon className="h-4 w-4" />
                   <span>m.kilic@nahsschool.edu.tr</span>
                 </div>
               </CardContent>

@@ -7,7 +7,7 @@ Official website for Nevzat Ayaz Anatolian High School Technology Club. Built wi
 
 ## 🚀 Features
 
-- **Modern Design**: Responsive design with Tailwind CSS and shadcn/ui components
+- **Modern Design**: Responsive design with Tailwind CSS components
 - **Interactive Map**: Leaflet map showcasing Hack Clubs worldwide
 - **SEO Optimization**: Comprehensive metadata, sitemap, and robots.txt
 - **Legal Documents**: Club charter, code of conduct, and safety protocols
@@ -19,7 +19,7 @@ Official website for Nevzat Ayaz Anatolian High School Technology Club. Built wi
 - **Framework**: Next.js 13+ (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
+- **Icons**: Heroicons
 - **Maps**: Leaflet
 - **Fonts**: Geist Sans & Mono
 - **Deployment**: Netlify ready
@@ -49,7 +49,7 @@ pnpm dev
 │   ├── team/              # Team page
 │   ├── join-us/           # Membership application page
 ├── components/            # Reusable components
-│   ├── ui/                # shadcn/ui components
+│   ├── ui/                # Tailwind UI components
 │   ├── header.tsx         # Site header
 │   └── footer.tsx         # Site footer
 ├── lib/                   # Utility functions

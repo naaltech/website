@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { cn } from "@/lib/utils"
 
 const navigation = [
@@ -64,9 +64,9 @@ export default function Header() {
             >
               <span className="sr-only">Open main menu</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>

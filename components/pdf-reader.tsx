@@ -1,8 +1,8 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist"
-import { Minus, Plus, Printer } from "lucide-react"
+import type { PDFDocumentLoadingTask, PDFDocumentProxy, RenderTask } from "pdfjs-dist"
+import { MinusIcon, PlusIcon, PrinterIcon } from "@heroicons/react/24/outline"
 import { Button } from "@/components/ui/button"
 
 const MIN_ZOOM = 0.75
@@ -83,7 +83,7 @@ export function PdfReader({
 
   useEffect(() => {
     let cancelled = false
-    let loadingTask: { destroy: () => Promise<void> } | null = null
+    let loadingTask: PDFDocumentLoadingTask | null = null
 
     async function load() {
       setStatus("loading")
@@ -114,15 +114,10 @@ export function PdfReader({
 
         loadingTask = pdfjs.getDocument({
           data,
-          isEvalSupported: false,
           standardFontDataUrl: "/pdfjs/standard_fonts/",
         })
         const pdf = await loadingTask.promise
-        loadingTask = null
-        if (cancelled) {
-          await pdf.destroy().catch(() => undefined)
-          return
-        }
+        if (cancelled) return
 
         pdfRef.current = pdf
         setPageCount(pdf.numPages)
@@ -136,14 +131,9 @@ export function PdfReader({
 
     return () => {
       cancelled = true
-      const pdf = pdfRef.current
       pdfRef.current = null
-      try {
-        if (pdf) void pdf.destroy().catch(() => undefined)
-        else void loadingTask?.destroy().catch(() => undefined)
-      } catch {
-        // Navigating away can destroy the worker while a page is still drawing.
-      }
+      // Navigating away can destroy the worker while a page is still drawing.
+      void loadingTask?.destroy().catch(() => undefined)
     }
   }, [fileUrl])
 
@@ -321,7 +311,7 @@ export function PdfReader({
             disabled={status !== "ready" || zoom <= MIN_ZOOM}
             onClick={() => setZoom((value) => Math.max(MIN_ZOOM, Number((value - ZOOM_STEP).toFixed(2))))}
           >
-            <Minus />
+            <MinusIcon />
           </Button>
           <span className="w-12 text-center text-sm text-gray-700">{Math.round(zoom * 100)}%</span>
           <Button
@@ -332,7 +322,7 @@ export function PdfReader({
             disabled={status !== "ready" || zoom >= MAX_ZOOM}
             onClick={() => setZoom((value) => Math.min(MAX_ZOOM, Number((value + ZOOM_STEP).toFixed(2))))}
           >
-            <Plus />
+            <PlusIcon />
           </Button>
           <Button
             type="button"
@@ -340,7 +330,7 @@ export function PdfReader({
             disabled={status !== "ready" || preparingPrint}
             onClick={() => void printDocument()}
           >
-            <Printer />
+            <PrinterIcon />
             {preparingPrint ? "Hazırlanıyor..." : "Yazdır"}
           </Button>
         </div>

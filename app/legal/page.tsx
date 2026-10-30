@@ -1,7 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
-import { FileText, Shield, Users, AlertCircle, Mail, ExternalLink, Building } from "lucide-react"
+import {
+  ArrowTopRightOnSquareIcon,
+  BuildingOfficeIcon,
+  DocumentTextIcon,
+  EnvelopeIcon,
+  ExclamationCircleIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline"
 import Link from "next/link"
 import Header from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -39,7 +46,7 @@ export default function LegalPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
             <Card className="border-gray-200">
               <CardHeader className="text-center">
-                <FileText className="h-8 w-8 text-gray-600 mx-auto mb-2" />
+                <DocumentTextIcon className="h-8 w-8 text-gray-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">Kulüp Tüzüğü</CardTitle>
               </CardHeader>
               <CardContent>
@@ -48,7 +55,7 @@ export default function LegalPage() {
             </Card>
             <Card className="border-gray-200">
               <CardHeader className="text-center">
-                <Building className="h-8 w-8 text-gray-600 mx-auto mb-2" />
+                <BuildingOfficeIcon className="h-8 w-8 text-gray-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">Mali Sponsorluk</CardTitle>
               </CardHeader>
               <CardContent>
@@ -57,7 +64,7 @@ export default function LegalPage() {
             </Card>
             <Card className="border-gray-200">
               <CardHeader className="text-center">
-                <Users className="h-8 w-8 text-gray-600 mx-auto mb-2" />
+                <UsersIcon className="h-8 w-8 text-gray-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">Davranış Kuralları</CardTitle>
               </CardHeader>
               <CardContent>
@@ -66,7 +73,7 @@ export default function LegalPage() {
             </Card>
             <Card className="border-gray-200">
               <CardHeader className="text-center">
-                <AlertCircle className="h-8 w-8 text-gray-600 mx-auto mb-2" />
+                <ExclamationCircleIcon className="h-8 w-8 text-gray-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">Güvenlik Kuralları</CardTitle>
               </CardHeader>
               <CardContent>
@@ -75,7 +82,7 @@ export default function LegalPage() {
             </Card>
             <Card className="border-gray-200">
               <CardHeader className="text-center">
-                <Mail className="h-8 w-8 text-gray-600 mx-auto mb-2" />
+                <EnvelopeIcon className="h-8 w-8 text-gray-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">Üyelik Başvuru</CardTitle>
               </CardHeader>
               <CardContent>
@@ -92,7 +99,7 @@ export default function LegalPage() {
           <Card className="border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
+                <DocumentTextIcon className="h-5 w-5" />
                 Kulüp Tüzüğü
               </CardTitle>
               <CardDescription>Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü Resmi Tüzüğü</CardDescription>
@@ -118,7 +125,7 @@ export default function LegalPage() {
                   href={documentHref("kulup-tuzugu")}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
-                  <FileText className="h-4 w-4" />
+                  <DocumentTextIcon className="h-4 w-4" />
                   Kulüp Tüzüğünü İncele
                 </Link>
               </div>
@@ -140,7 +147,7 @@ export default function LegalPage() {
           <Card className="border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Building className="h-5 w-5" />
+                <BuildingOfficeIcon className="h-5 w-5" />
                 Hack Club Fiscal Sponsorship
               </CardTitle>
               <CardDescription>Mali sponsorluk ve vergi muafiyeti belgeleri</CardDescription>
@@ -170,42 +177,42 @@ export default function LegalPage() {
                     href={documentHref("verification-letter")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     Verification Letter
                   </Link>
                   <Link
                     href={documentHref("fiscal-sponsorship")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     Fiscal Sponsorship Confirmation
                   </Link>
                   <Link
                     href={documentHref("certificate-of-status")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     Certificate of Status
                   </Link>
                   <Link
                     href={documentHref("irs-501c3")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     IRS 501(c)(3) Certificate
                   </Link>
                   <Link
                     href={documentHref("hack-club-w9")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     Hack Club W-9 Form
                   </Link>
                   <Link
                     href={documentHref("hack-foundation-990")}
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium p-3 bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    <FileText className="h-4 w-4" />
+                    <DocumentTextIcon className="h-4 w-4" />
                     Hack Foundation 990
                   </Link>
                 </div>
@@ -223,7 +230,7 @@ export default function LegalPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
-                  <ExternalLink className="h-4 w-4" />
+                  <ArrowTopRightOnSquareIcon className="h-4 w-4" />
                   Hack Club Bank üzerinden bağış yapın
                 </a>
               </div>
@@ -238,7 +245,7 @@ export default function LegalPage() {
           <Card className="border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Users className="h-5 w-5" />
+                <UsersIcon className="h-5 w-5" />
                 Davranış Kuralları
               </CardTitle>
               <CardDescription>Kulüp üyelerinden beklenen davranış standartları</CardDescription>
@@ -263,7 +270,7 @@ export default function LegalPage() {
                   href={documentHref("davranis-kurallari")}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
-                  <FileText className="h-4 w-4" />
+                  <DocumentTextIcon className="h-4 w-4" />
                   Tam Davranış Kuralları Dokümanı
                 </Link>
               </div>
@@ -286,7 +293,7 @@ export default function LegalPage() {
           <Card className="border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <AlertCircle className="h-5 w-5" />
+                <ExclamationCircleIcon className="h-5 w-5" />
                 Güvenlik Kuralları
               </CardTitle>
               <CardDescription>Laboratuvar çalışmaları ve ekipman kullanımı için güvenlik protokolleri</CardDescription>
@@ -352,7 +359,7 @@ export default function LegalPage() {
           <Card className="border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
+                <EnvelopeIcon className="h-5 w-5" />
                 Üyelik Başvuru Formu
               </CardTitle>
               <CardDescription>Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü Üyelik Başvuru Formu</CardDescription>
@@ -405,13 +412,13 @@ export default function LegalPage() {
                   href="/join-us"
                 >
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
-                    <Mail className="h-4 w-4 mr-2" />
+                    <EnvelopeIcon className="h-4 w-4 mr-2" />
                     Dijital Form (Online Başvuru)
                   </Button>
                 </Link>
                 <Link href={documentHref("uyelik-basvuru-formu")}>
                   <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                    <FileText className="h-4 w-4 mr-2" />
+                    <DocumentTextIcon className="h-4 w-4 mr-2" />
                     Fiziksel Formu Görüntüle
                   </Button>
                 </Link>
@@ -419,7 +426,7 @@ export default function LegalPage() {
 
               <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <AlertCircle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <ExclamationCircleIcon className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-amber-900 mb-1">Önemli Bilgilendirme</h4>
                     <p className="text-amber-800 text-sm">
