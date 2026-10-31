@@ -1,0 +1,65 @@
+---
+import "@fontsource-variable/geist"
+import "@fontsource-variable/geist-mono"
+import "@/styles/global.css"
+import Footer from "@/components/Footer.astro"
+import Header from "@/components/Header.astro"
+
+const siteName = "Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü"
+
+interface Props {
+  title?: string
+  description?: string
+  keywords?: string[]
+  ogTitle?: string
+  ogDescription?: string
+}
+
+const {
+  title,
+  description = "Nevzat Ayaz Anadolu Lisesi Teknoloji Kulübü - Geleceğin teknolojilerini bugünden keşfeden, üreten ve paylaşan bir topluluk. Yazılım, robotik ve siber güvenlik alanlarında eğitim ve projeler.",
+  keywords = ["teknoloji kulübü", "Nevzat Ayaz", "NAAL", "yazılım", "robotik", "siber güvenlik", "programlama", "hack club", "öğrenci kulübü", "Ümraniye"],
+  ogTitle = siteName,
+  ogDescription = "Geleceğin teknolojilerini bugünden keşfeden, üreten ve paylaşan öğrenci topluluğu.",
+} = Astro.props
+
+const pageTitle = title ? `${title} | ${siteName}` : siteName
+const canonical = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="author" content={siteName} />
+    <meta name="creator" content={siteName} />
+    <meta name="publisher" content="Nevzat Ayaz Anadolu Lisesi" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:site_name" content={siteName} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteName} />
+    <meta name="twitter:description" content={siteName} />
+    <meta name="twitter:creator" content="@naalteknoloji" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-white">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

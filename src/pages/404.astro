@@ -1,0 +1,14 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import Button from "@/components/ui/Button.astro"
+---
+
+<Layout title="Sayfa bulunamadı">
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Sayfa bulunamadı</h1>
+      <p class="text-xl text-gray-600 mb-8">Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.</p>
+      <Button href="/" size="lg" class="bg-gray-900 hover:bg-gray-800 text-white px-8">Anasayfaya dön</Button>
+    </div>
+  </section>
+</Layout>

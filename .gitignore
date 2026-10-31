@@ -7,7 +7,9 @@ logs
 .DS_Store
 .idea
 .next
+.astro
 yarn-error.log
 npm-debug.log
 out
 public/pdfjs/
+/.claude

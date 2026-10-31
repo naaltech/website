@@ -1,0 +1,103 @@
+---
+import Icon from "@/components/Icon.astro"
+import Button from "@/components/ui/Button.astro"
+
+interface Props {
+  fileUrl: string
+  filename: string
+}
+
+const { fileUrl, filename } = Astro.props
+---
+
+<div data-pdf-reader data-file-url={fileUrl} class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+  <div class="no-print flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 bg-gray-50 px-4 py-3">
+    <p data-page-count class="text-sm text-gray-600">PDF okuyucu</p>
+    <div class="flex items-center gap-2">
+      <Button type="button" variant="outline" size="icon" aria-label="Uzaklaştır" disabled data-zoom-out>
+        <Icon name="minus" />
+      </Button>
+      <span data-zoom-label class="w-12 text-center text-sm text-gray-700">100%</span>
+      <Button type="button" variant="outline" size="icon" aria-label="Yakınlaştır" disabled data-zoom-in>
+        <Icon name="plus" />
+      </Button>
+      <Button type="button" variant="outline" disabled data-print>
+        <Icon name="printer" />
+        <span data-print-label>Yazdır</span>
+      </Button>
+    </div>
+  </div>
+
+  <div data-scroller class="pdf-scroll max-h-[75vh] overflow-auto bg-gray-100 p-4 md:p-6">
+    <div data-status="loading" class="flex h-80 items-center justify-center">
+      <div class="text-center">
+        <div class="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-b-2 border-gray-900"></div>
+        <p class="text-gray-600">Belge açılıyor...</p>
+      </div>
+    </div>
+    <div data-status="missing" hidden class="flex h-80 items-center justify-center px-6 text-center">
+      <div>
+        <p class="font-medium text-gray-900">Bu belge henüz eklenmedi.</p>
+        <p class="mt-2 text-sm text-gray-600">
+          PDF dosyasını şu adla klasöre koyun:{" "}
+          <span class="font-mono">public/belgeler/{filename}</span>
+        </p>
+      </div>
+    </div>
+    <div data-status="error" hidden class="flex h-80 items-center justify-center px-6 text-center">
+      <p class="text-gray-600">Belge okunamadı. Dosyanın geçerli bir PDF olduğundan emin olun.</p>
+    </div>
+    <div data-host class="flex flex-col gap-4"></div>
+  </div>
+</div>
+
+<script>
+  import { initPdfReader } from "@/scripts/pdf-reader"
+
+  document.querySelectorAll<HTMLElement>("[data-pdf-reader]").forEach(initPdfReader)
+</script>
+
+<style is:global>
+  [data-status][hidden] {
+    display: none;
+  }
+  #pdf-print-root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+  @media print {
+    body:has(#pdf-print-root) > *:not(#pdf-print-root) {
+      display: none !important;
+    }
+    #pdf-print-root {
+      display: block !important;
+      position: static !important;
+      width: auto !important;
+      opacity: 1 !important;
+      z-index: auto !important;
+      margin: 0;
+      padding: 0;
+    }
+    #pdf-print-root img {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      break-after: page;
+      page-break-after: always;
+    }
+    #pdf-print-root img:last-child {
+      break-after: auto;
+      page-break-after: auto;
+    }
+  }
+  @page {
+    margin: 0;
+  }
+</style>
